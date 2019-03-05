@@ -1,0 +1,28 @@
+{
+  "name": "react--music",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --config config/webpack.dev.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpxGithub/react--music.git"
+  },
+  "author": "cpx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cpxGithub/react--music/issues"
+  },
+  "homepage": "https://github.com/cpxGithub/react--music#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-merge": "^4.2.1"
+  }
+}
