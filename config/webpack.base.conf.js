@@ -14,11 +14,7 @@ module.exports = {
         test: /\.m?js$/,
         include: /src/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-            plugins: ['@babel/plugin-syntax-dynamic-import']
-          }
+          loader: 'babel-loader'
         }
       }
     ]
