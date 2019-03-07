@@ -6,7 +6,7 @@ class Td extends Component {
   render() {
     return (
       <main>
-        <div className="top">this is td</div>
+        <div className="top">this is td.</div>
         <img src={ImgSrc} alt="" />
       </main>
     );
