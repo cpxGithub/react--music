@@ -1,13 +1,15 @@
 module.exports = {
-  presets: [
+  "presets": [
     [
       "@babel/preset-env",
       {
-        "modules": false
+        "modules": false,
+        "useBuiltIns": "usage"
       }
-    ]
+    ],
+    ["@babel/preset-react"]
   ],
-  plugins: [
+  "plugins": [
     "@babel/plugin-syntax-dynamic-import"
   ]
 }
