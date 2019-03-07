@@ -9,10 +9,13 @@
 // console.log(Object.values({ 1: 2 }));
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Td from './n.jsx';
+import './assets/styles/reset.css';
 
 ReactDOM.render(
   <div>
     <h1>Hello, world!</h1>
+    <Td />
   </div>,
   document.getElementById('root')
-)
+);

@@ -1,0 +1,40 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "rules": {
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "global-require": 0,
+    "comma-dangle": ["error", "never"],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "indent": 0,
+    "no-tabs": "off",
+    "no-console": 1,
+    "import/no-unresolved": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/prefer-stateless-function": 0
+  }
+}
