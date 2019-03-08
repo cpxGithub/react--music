@@ -11,11 +11,13 @@ function resolve (dir) {
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: 'development',
+  devtool: 'cheap-module-source-map',
   devServer: {
     compress: true,
+    port: 9000,
     host: '0.0.0.0',
     hot: true,
-    publicPath: '/assets/',
+    publicPath: '/',
     quiet: true // 关闭打印信息
   },
   plugins: [
@@ -28,7 +30,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: resolve('public/index.html')
+      template: resolve('public/index.html'),
+      inject: true
     })
   ]
 })

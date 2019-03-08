@@ -5,10 +5,10 @@ import 'assets/styles/n.less';
 class Td extends Component {
   render() {
     return (
-      <main>
+      <section>
         <div className="top">this is td.</div>
         <img src={ImgSrc} alt="" />
-      </main>
+      </section>
     );
   }
 }
