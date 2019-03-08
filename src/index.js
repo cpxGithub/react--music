@@ -6,7 +6,6 @@
 //   resolve({name: 1})
 // });
 // console.log(aaa);
-// console.log(Object.values({ 1: 2 }));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Td from './n.jsx';

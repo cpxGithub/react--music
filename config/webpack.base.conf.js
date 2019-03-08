@@ -1,4 +1,6 @@
 const path = require('path')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== 'production'
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -34,14 +36,13 @@ module.exports = {
         use: ['babel-loader']
       },
       {
-        test: /\.css$/,
-        include: /src/,
-        use: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.less$/,
-        include: /src/,
-        use: ['style-loader', 'css-loader', 'less-loader']
+        test: /\.(le|c)ss$/,
+        use: [
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          'postcss-loader',
+          'less-loader',
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg)/,
@@ -52,5 +53,13 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: devMode ? '[name].css' : '[name].[hash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+    })
+  ]
 }
